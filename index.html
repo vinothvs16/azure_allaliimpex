@@ -21,6 +21,21 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+    /* Styles for screens wider than 768px (e.g., tablets and up) */
+    @media screen and (min-width: 600px) {
+        #accordion{
+			width:100% !important;
+		}
+        /* ... more styles for larger screens */
+    }
+
+    /* Styles for screens wider than 1200px (e.g., desktops and up) */
+    @media screen and (min-width: 1200px) {
+         #accordion{
+			width:60% !important;
+		}
+        /* ... more styles for very large screens */
+    }
 
 html,body{
 height: 100%;
@@ -48,9 +63,6 @@ flex-direction:column;
 .prod-header{
 padding-left:10px;
 }
-#accordion{
-width:60%;
-}
 .auto-height{
 height:auto !important;
 }
@@ -68,7 +80,7 @@ background-image: linear-gradient(to bottom, #FCECE9, #F5CAC1);
   <h3 style="" class="bg-gradient">Raw Cotton Bale</h3>
   <div style="" class="auto-height" id="product1">
   <div>
-  <image src="cotton-new.jpg" style="height:250px;object-fit: contain;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);border-radius:32px"/>
+  <image src="cotton-new.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);border-radius:32px;width:250px"/>
   </div>
   <div>
   <h3>Short Description:</h3>

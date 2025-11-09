@@ -31,9 +31,12 @@
 		}
 		.corousel-img-h-w{
 height:250px;
-width:250px;
+width:100%;
 object-fit: cover;
 }
+.carousel-item{width:100% !important}
+.carousel-inner{width:100% !important}
+#carouselExampleIndicators{width:100%}
         /* ... more styles for larger screens */
     }
 
@@ -47,6 +50,7 @@ height:250px;
 width:500px;
 object-fit: cover;
 }
+#carouselExampleIndicators{width:500px}
         /* ... more styles for very large screens */
     }
 
@@ -87,6 +91,7 @@ background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
 <title>Allali Impex</title>
 </head>
 <body>
+	<div style="position:absolute;top:0px;height:93%;width:100%;overflow: auto;">
 <div id="container">
 <div style="width:100%;border-radius:10px;text-align:center;background-color: #0d6c0d;text-align: left;font-weight: bold;"><h1 style="color: white;font-weight: bold;margin-left:10px">Allali Impex</h1></div>
 
@@ -99,13 +104,13 @@ background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="corousel-img-h-w" src="peanuts.jpg" alt="First slide">
+      <img class="corousel-img-h-w d-block" src="peanuts.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="corousel-img-h-w" src="chillie.jpg" alt="Second slide">
+      <img class="corousel-img-h-w d-block" src="chillie.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="corousel-img-h-w" src="cotton-new.jpg" alt="Third slide">
+      <img class="corousel-img-h-w d-block" src="cotton-new.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -245,6 +250,8 @@ background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
   </div>
 </div>
 </div>
-<div id="footer" style="padding:10px;margin-top:20px;background-color: #0d6c0d;border-radius: 8px;width: 100%;color:white"> FOOTER</div>
+</div>
+<div id="footer" style="position:fixed; background-color: #0d6c0d;border-radius: 8px;width: 100%;color:white;bottom:0px;padding-left:10px;height:37px;">
+	<a  href="info@allaliimpex.com" target="_blank"><strong>info@allaliimpex.com</strong></a> contact us: 123456;</div>
 </body>
 </html>

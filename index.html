@@ -30,13 +30,16 @@
 			width:100% !important;
 		}
 		.corousel-img-h-w{
-height:250px;
-width:100%;
-object-fit: cover;
-}
+           height:250px;
+           width:100%;
+           object-fit: cover;
+      }
 .carousel-item{width:100% !important}
 .carousel-inner{width:100% !important}
 #carouselExampleIndicators{width:100%}
+#desc{
+	width:100% !important
+}
         /* ... more styles for larger screens */
     }
 
@@ -46,13 +49,18 @@ object-fit: cover;
 			width:60% !important;
 		}
 		.corousel-img-h-w{
-           height:250px;
-           width:500px;
+           height:350px;
+           width:100%;
            object-fit: cover;
        }
        #carouselExampleIndicators{
-		width:500px !important
+		width:60% !important
 	}
+	.carousel-item{width:100% !important}
+    .carousel-inner{width: 100% !important}
+	#desc{
+	width:60% !important
+}
         /* ... more styles for very large screens */
     }
 
@@ -61,16 +69,26 @@ height: 100%;
             margin: 0; /* Remove default margin */
             padding: 0; 
 }
-body{
-/*background-image: url('exportimage.jpg');
+/*body{
+background-image: url('allali_img1.jpg');
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
-background-attachment: fixed;*/
+background-attachment: fixed;
 position:absolute;
 top:0px;
 bottom:0px;
 width:100%;
+}*/
+#title-img{
+background-image: url('allali_img1.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+/*background-attachment: fixed;
+position:absolute;*/
+width:100%;
+height:317px;
 }
 #container{
 display: flex;
@@ -86,19 +104,43 @@ padding-left:10px;
 height:auto !important;
 }
 .bg-gradient{
-background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
+background-image: linear-gradient(to bottom, #e2c5ad, #e2c5ad);
+/*background-color: #e2c5ad !important;**/
 }
-
+#desc{
+	/*height:150px;*/
+	word-wrap: normal;
+	text-align: center;
+	margin-top: 23px;
+	font-size: large;
+	width: 60%;
+}
+#logo {
+        background-image: url('allali_logo_1.svg');
+        background-size: cover; /* Optional: Adjusts the size of the background image */
+        background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+        background-position: center; /* Optional: Centers the background image */
+        /* Other background properties as needed */
+		width:379px;
+		height:149px;
+    }
 </style>
 <title>Allali Impex</title>
 </head>
 <body>
 	<div style="position:absolute;top:0px;height:93%;width:100%;overflow: auto;">
 <div id="container">
-<div style="width:100%;border-radius:10px;text-align:center;background-color: #0d6c0d;text-align: left;font-weight: bold;"><h1 style="color: white;font-weight: bold;margin-left:10px">Allali Impex</h1></div>
+<div style="width:100%;text-align:center;background-color: #d47a30;text-align: left;font-weight: bold;height:115px"><div id="logo"></div>
+<!--<h1 style="color: white;font-weight: bold;margin-left:10px">Allali Impex</h1>-->
+</div>
+<div id="title-img"></div>
+<div id="desc">
+	<h1>About Us</h1>
+	<div><p>At <span style="font-weight: bold;color:#e36d0b">Allali Impex</span>, we specialize in connecting global markets through seamless export and import solutions. With a strong network of international partners, we source and deliver quality products across industries — ensuring reliability, transparency, and timely execution in every shipment.
 
-
-<div id="carouselExampleIndicators" class="carousel slide " data-bs-interval="1000" data-ride="carousel" style="position:relative;top:10px">
+Our team combines decades of experience in international trade, logistics, and compliance to make cross-border business effortless for our clients. Whether it’s exporting premium goods from India or importing world-class materials, we handle every step — from documentation and customs clearance to delivery — with utmost precision.</p></div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide " data-bs-interval="10" data-ride="carousel" style="position:relative;top:10px">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -131,7 +173,7 @@ background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
   <h3 style="" class="bg-gradient">Raw Cotton Bale</h3>
   <div style="" class="auto-height" id="product1">
   <div>
-  <image src="cotton-new.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);border-radius:32px;width:100%"/>
+  <image src="cotton-new.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
   </div>
   <div>
   <h3>Short Description:</h3>
@@ -253,7 +295,7 @@ background-image: linear-gradient(to bottom, #f8fbfa, #0c9c469c);
 </div>
 </div>
 </div>
-<div id="footer" style="position:fixed; background-color: #0d6c0d;border-radius: 8px;width: 100%;color:white;bottom:0px;padding-left:10px;height:37px;">
-	<a  href="info@allaliimpex.com" target="_blank"><strong>info@allaliimpex.com</strong></a> contact us: 123456;</div>
+<div id="footer" style="position:fixed; background-color: #d47a30;width: 100%;color:white;bottom:0px;padding-left:10px;height:37px;">
+	<strong>info@allaliimpex.com</strong> contact us: 123456;</div>
 </body>
 </html>

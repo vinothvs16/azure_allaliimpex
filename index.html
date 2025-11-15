@@ -37,12 +37,13 @@
 .carousel-item{width:100% !important}
 .carousel-inner{width:100% !important}
 #carouselExampleIndicators{width:100%}
-#desc{
+#desc,#choose{
 	width:100% !important
 }
 
 #logo{
-	width:164px;
+	/*width:164px;*/
+	width: auto;
 		height:132px;
 }
         /* ... more styles for larger screens */
@@ -116,7 +117,7 @@ height:auto !important;
 background-image: linear-gradient(to bottom, #e2c5ad, #e2c5ad);
 /*background-color: #e2c5ad !important;**/
 }
-#desc{
+#desc,#choose{
 	/*height:150px;*/
 	word-wrap: normal;
 	text-align: center;
@@ -145,13 +146,27 @@ background-image: linear-gradient(to bottom, #e2c5ad, #e2c5ad);
 	<h1>About Us</h1>
 	<div><p>At <span style="font-weight: bold;color:#e36d0b">Allali Impex</span>, we specialize in connecting global markets through seamless export and import solutions. With a strong network of international partners, we source and deliver quality products across industries — ensuring reliability, transparency, and timely execution in every shipment.
 
-Our team combines decades of experience in international trade, logistics, and compliance to make cross-border business effortless for our clients. Whether it’s exporting premium goods from India or importing world-class materials, we handle every step — from documentation and customs clearance to delivery — with utmost precision.</p></div>
+Our team combines decades of experience in international trade, logistics, and compliance to make cross-border business effortless for our clients. Whether it’s exporting premium goods from India or importing world-class materials, we handle every step — from documentation and customs clearance to delivery — with utmost precision.</p>
+</div>
+</div>
+<div id="choose" style="display: flex;flex-direction: column;align-items: center;">
+	<h1>Why choose <span>Allali Impex</span></h1>
+	<div>
+		<ul style="list-style-type: none;text-align: left;padding: 0px;margin: 0px;">
+			<li>✅ Direct farm sourcing</li>
+			<li>✅ Hygienic cleaning & double polishing</li>
+			<li>✅ Custom packaging and private labeling</li>
+			<li>✅ On-time worldwide delivery</li>
+			<li>✅ Competitive export pricing</li>
+		</ul>
+</div>
 </div>
 <div id="carouselExampleIndicators" class="carousel slide " data-bs-interval="10" data-ride="carousel" style="position:relative;top:10px">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -162,6 +177,9 @@ Our team combines decades of experience in international trade, logistics, and c
     </div>
     <div class="carousel-item">
       <img class="corousel-img-h-w d-block" src="cotton-new.jpg" alt="Third slide">
+    </div>
+	<div class="carousel-item">
+      <img class="corousel-img-h-w d-block" src="turmeric.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -185,85 +203,6 @@ Our team combines decades of experience in international trade, logistics, and c
   <div>
   <h3>Short Description:</h3>
     <p>Premium quality Raw Cotton Bales sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
-	<h3>Product Specifications:</h3>
-	<table style="border-spacing: 15px 0;">
-	<thead>
-	<tr>
-	<th>Parameter</th>
-	<th>Details</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>Product Name</td>
-	<td>Raw Cotton Bale</td>
-	</tr>
-	<tr>
-	<td>Origin</td>
-	<td>India</td>
-	</tr>
-	<tr>
-	<td>Cotton Variety</td>
-	<td>Shankar-6 / MCU-5 / DCH-32 / Bengal Desi (as per buyer requirement)</td>
-	</tr>
-	<tr>
-	<td>Ginning Type</td>
-	<td>Roller Ginned / Saw Ginned</td>
-	</tr>
-	<tr>
-	<td>Color</td>
-	<td>White to Off White</td>
-	</tr>
-	<tr>
-	<td>Staple Length</td>
-	<td>28 mm to 32 mm</td>
-	</tr>
-	<tr>
-	<td>Micronaire Value</td>
-	<td>3.5 – 4.9</td>
-	</tr>
-	<tr>
-	<td>Moisture Content</td>
-	<td>7% – 8% Max</td>
-	</tr>
-	<tr>
-	<td>Trash Content</td>
-	<td>2% – 3% Max</td>
-	</tr>
-	<tr>
-	<td>Strength (GPT)</td>
-	<td>28 – 32</td>
-	</tr>
-	<tr>
-	<td>Strength (GPT)</td>
-	<td>28 – 32</td>
-	</tr>
-	<tr>
-	<td>Press Weight per Bale</td>
-	<td>160 – 170 Kg (Net)</td>
-	</tr>
-	<tr>
-	<td>Packaging</td>
-	<td>Fully pressed and wrapped in cotton cloth or PP sheet</td>
-	</tr>
-	<tr>
-	<td>HS Code</td>
-	<td>52010000</td>
-	</tr>
-	<tr>
-	<td>Delivery Time</td>
-	<td>7–10 days after confirmation</td>
-	</tr>
-	<tr>
-	<td>Payment Terms</td>
-	<td>L/C, T/T, Advance</td>
-	</tr>
-	<tr>
-	<td>Loading Port</td>
-	<td>Chennai / Tuticorin / Mumbai Port, India</td>
-	</tr>
-	</tbody>
-	</table>
 	</div>
 	<h3>Export & Usage Information:</h3>
 	<div>
@@ -282,22 +221,86 @@ Our team combines decades of experience in international trade, logistics, and c
 	</ul>
 	</div>
   </div>
-  <h3 class="bg-gradient">Section 2</h3>
-  <div class="auto-height">
-    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+  <h3 class="bg-gradient">Dry Red chilli</h3>
+  <div class="auto-height" id="product2">
+    <div>
+  <image src="chillie.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
   </div>
-  <h3 class="bg-gradient">Section 3</h3>
-  <div class="auto-height">
-    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
+  <div>
+  <h3>Short Description:</h3>
+    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
+	
+	</div>
+	<h3>Export & Usage Information:</h3>
+	<div>
+	<ul>
+	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
+	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
+	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
+	</ul>
+	</div>
+	<h3>Packaging & Transportation:</h3>
+	<div>
+	<ul>
+	<li>Bales are securely packed with iron or plastic straps.</li>
+	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
+	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
+	</ul>
+	</div>
+  </div>
+  <h3 class="bg-gradient">Peanuts</h3>
+  <div class="auto-height" id="product3">
+    <div>
+  <image src="peanuts.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
+  </div>
+  <div>
+  <h3>Short Description:</h3>
+    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
+	
+	</div>
+	<h3>Export & Usage Information:</h3>
+	<div>
+	<ul>
+	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
+	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
+	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
+	</ul>
+	</div>
+	<h3>Packaging & Transportation:</h3>
+	<div>
+	<ul>
+	<li>Bales are securely packed with iron or plastic straps.</li>
+	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
+	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
+	</ul>
+	</div>
   </div >
-  <h3 class="bg-gradient">Section 4</h3>
-  <div class="auto-height">
-    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p><p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+  <h3 class="bg-gradient">Turmeric</h3>
+  <div class="auto-height" id="product4">
+    <div>
+  <image src="turmeric.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
+  </div>
+  <div>
+  <h3>Short Description:</h3>
+    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
+	
+	</div>
+	<h3>Export & Usage Information:</h3>
+	<div>
+	<ul>
+	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
+	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
+	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
+	</ul>
+	</div>
+	<h3>Packaging & Transportation:</h3>
+	<div>
+	<ul>
+	<li>Bales are securely packed with iron or plastic straps.</li>
+	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
+	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
+	</ul>
+	</div>
   </div>
 </div>
 </div>

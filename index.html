@@ -99,6 +99,7 @@ background-position: center;*/
 position:absolute;*/
 width:100%;
 height:317px;
+will-change: transform;
 }
 #container{
 display: flex;
@@ -130,8 +131,32 @@ background-image: linear-gradient(to bottom, #e2c5ad, #e2c5ad);
         background-size: cover; /* Optional: Adjusts the size of the background image */
         background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
         background-position: center; /* Optional: Centers the background image */
+		background-attachment: scroll;
         /* Other background properties as needed */
     }
+	.tick-icon{
+		color: #e36d0b;
+		font-weight: bold;
+	}
+	
+	.arrow-icon-ul{
+		/*list-style-type:"\2192" ;*/
+		list-style: none;
+		padding-left: 0px;
+	}
+	.arrow-icon{
+		position: relative;
+		padding-left: 1.5rem;
+	}
+	.arrow-icon::before{
+		content: "\2192";
+		position:absolute;
+		left:0;
+		/*top:0.3rem;*/
+		font-size: 1.2rem;
+		color:#e36d0b ;
+		font-weight: bold;
+	}
 </style>
 <title>Allali Impex</title>
 </head>
@@ -153,11 +178,11 @@ Our team combines decades of experience in international trade, logistics, and c
 	<h1>Why choose <span>Allali Impex</span></h1>
 	<div>
 		<ul style="list-style-type: none;text-align: left;padding: 0px;margin: 0px;">
-			<li>✅ Direct farm sourcing</li>
-			<li>✅ Hygienic cleaning & double polishing</li>
-			<li>✅ Custom packaging and private labeling</li>
-			<li>✅ On-time worldwide delivery</li>
-			<li>✅ Competitive export pricing</li>
+			<li><span class="tick-icon">&check;</span> Direct farm sourcing</li>
+			<li><span class="tick-icon">&check;</span> Hygienic cleaning & double polishing</li>
+			<li><span class="tick-icon">&check;</span> Custom packaging and private labeling</li>
+			<li><span class="tick-icon">&check;</span> On-time worldwide delivery</li>
+			<li><span class="tick-icon">&check;</span> Competitive export pricing</li>
 		</ul>
 </div>
 </div>
@@ -206,18 +231,18 @@ Our team combines decades of experience in international trade, logistics, and c
 	</div>
 	<h3>Export & Usage Information:</h3>
 	<div>
-	<ul>
-	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
-	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
-	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
+	<ul class="arrow-icon-ul">
+	<li class="arrow-icon"><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
+	<li class="arrow-icon"><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
+	<li class="arrow-icon"><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
 	</ul>
 	</div>
 	<h3>Packaging & Transportation:</h3>
 	<div>
-	<ul>
-	<li>Bales are securely packed with iron or plastic straps.</li>
-	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
-	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
+	<ul class="arrow-icon-ul">
+	<li class="arrow-icon">Bales are securely packed with iron or plastic straps.</li>
+	<li class="arrow-icon">Wrapped with HDPE or cotton cloth for safe handling during export.</li>
+	<li class="arrow-icon">Container loading: approx. 110–120 bales per 40ft container.</li>
 	</ul>
 	</div>
   </div>

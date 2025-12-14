@@ -1,338 +1,290 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script>
-  $( function() {
-    $( "#accordion" ).accordion({
-      collapsible: true,
-	  active: false
-    });
-  } );
-  </script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<style>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-    /* Styles for screens wider than 768px (e.g., tablets and up) */
-    @media screen and (min-width: 200px) {
-        #accordion{
-			width:100% !important;
+		function openToggleMenu() {
+			var element = document.getElementById("menu-id");
+			var displayCss = element.style.display;
+			//alert(displayCss);
+			if (displayCss == 'none') {
+				element.style.setProperty("display", "grid", "important");
+				//element.style.setProperty("display", "none", "important");
+				//element.style.display = 'flex !important';
+				//element.style.setProperty("flexDirection", "coloumn");
+				//element.style.flexDirection = "coloumn";
+			}
+			else {
+				element.style.setProperty("display", "none", "important");
+				//element.style.display = 'none';
+			}
 		}
-		.corousel-img-h-w{
-           height:250px;
-           width:100%;
-           object-fit: cover;
-      }
-.carousel-item{width:100% !important}
-.carousel-inner{width:100% !important}
-#carouselExampleIndicators{width:100%}
-#desc,#choose{
-	width:100% !important
-}
-
-#logo{
-	/*width:164px;*/
-	width: auto;
-		height:132px;
-}
-        /* ... more styles for larger screens */
-    }
-
-    /* Styles for screens wider than 1200px (e.g., desktops and up) */
-    @media screen and (min-width: 1200px) {
-         #accordion{
-			width:60% !important;
+	</script>
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			font-family: Arial, Helvetica, sans-serif;
 		}
-		.corousel-img-h-w{
-           height:350px;
-           width:100%;
-           object-fit: cover;
-       }
-       #carouselExampleIndicators{
-		width:60% !important
-	}
-	.carousel-item{width:100% !important}
-    .carousel-inner{width: 100% !important}
-	#desc{
-	width:60% !important
-}
-#logo{
-	width:379px;
-		height:149px;
-}
-        /* ... more styles for very large screens */
-    }
 
-html,body{
-height: 100%;
-            margin: 0; /* Remove default margin */
-            padding: 0; 
+		.resp-body {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			width: 100%;
+			background-color: #f7fe9f;
+		}
+
+		.pad {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		.resp-header {
+			width: 100%;
+			height: 203px;
+			background-color: #166f59;
+		}
+
+		.flex-header {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.p-menu1 {
+			height: 100%;
+		}
+
+
+
+
+		/* Hamburger */
+		.hamburger1 {
+			height: 45px;
+			margin: 10px;
+			display: -ms-grid;
+			display: grid;
+			grid-template-rows: repeat(3, 1fr);
+			justify-items: center;
+			z-index: 120;
+		}
+
+		.hamburger1 div {
+			background-color: white;
+			position: relative;
+			width: 40px;
+			height: 5px;
+			margin-top: 7px;
+			-webkit-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+		}
+
+		#toggle1 {
+			display: none;
+		}
+
+		#toggle1:checked+.hamburger1 .top {
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+			margin-top: 22.5px;
+		}
+
+		#toggle1:checked+.hamburger1 .meat {
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			margin-top: -5px;
+		}
+
+		#toggle1:checked+.hamburger1 .bottom {
+			-webkit-transform: scale(0);
+			transform: scale(0);
+		}
+
+		#toggle1:checked~.menu1 {
+			height: 340px;
+		}
+
+
+		/* Menu */
+		.menu1 {
+			display: none !important;
+			/*width: 100%;*/
+			height: 437px !important;
+			position: absolute;
+			width: 347px !important;
+			background-color: #02173F;
+			margin: 0;
+			display: -ms-grid;
+			display: grid;
+			grid-template-rows: 1fr repeat(4, 0.5fr);
+			grid-row-gap: 25px;
+			padding: 0;
+			list-style: none;
+			clear: both;
+			width: auto;
+			text-align: center;
+			height: 0px;
+			overflow: hidden;
+			transition: height .4s ease;
+			z-index: 120;
+			-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+
+		.menu1 a:first-child {
+			margin-top: 40px;
+			font-size: 34px;
+		}
+
+		.menu1 a:last-child {
+			margin-bottom: 40px;
+		}
+
+		.link1 {
+			width: 100%;
+			margin: 0;
+			padding: 10px 0;
+			/*font: 700 20px 'Oswald', sans-serif;*/
+			font-size: 34px;
+		}
+
+		.link1:hover {
+			background-color: #fff;
+			color: rgb(61, 61, 61);
+			-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+		}
+
+		.img-header {
+			width: auto;
+			height: 450px;
+		}
+
+		.bckimage {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.f-size {
+			font-size: 45px;
+		}
+
+		.f-size-headings {
+			font-size: 54px;
+		}
+
+		.section-pad {
+			padding: 15px;
+		}
+
+		.white-text-color{
+			color: white;
+		}
+
+.green-text-color{
+	color:#166f59
 }
-/*body{
-background-image: url('allali_img1.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-position:absolute;
-top:0px;
-bottom:0px;
-width:100%;
-}*/
-#title-img{
-/*background-image: url('allali_img1.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;*/
-/*background-attachment: fixed;
-position:absolute;*/
-width:100%;
-height:317px;
-will-change: transform;
+.p-font-size{
+	font-size: 40px;
 }
-#container{
-display: flex;
-justify-content: center;
-width:100%;
-align-items: center;
-flex-direction:column;
-}
-.prod-header{
-padding-left:10px;
-}
-.auto-height{
-height:auto !important;
-}
-.bg-gradient{
-background-image: linear-gradient(to bottom, #e2c5ad, #e2c5ad);
-/*background-color: #e2c5ad !important;**/
-}
-#desc,#choose{
-	/*height:150px;*/
-	word-wrap: normal;
-	text-align: center;
-	margin-top: 23px;
-	font-size: large;
-	width: 60%;
-}
-#logo {
-        background-image: url('allali_logo_1.svg');
-        background-size: cover; /* Optional: Adjusts the size of the background image */
-        background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
-        background-position: center; /* Optional: Centers the background image */
-		background-attachment: scroll;
-        /* Other background properties as needed */
-    }
-	.tick-icon{
-		color: #e36d0b;
-		font-weight: bold;
-	}
-	
-	.arrow-icon-ul{
-		/*list-style-type:"\2192" ;*/
-		list-style: none;
-		padding-left: 0px;
-	}
-	.arrow-icon{
-		position: relative;
-		padding-left: 1.5rem;
-	}
-	.arrow-icon::before{
-		content: "\2192";
-		position:absolute;
-		left:0;
-		/*top:0.3rem;*/
-		font-size: 1.2rem;
-		color:#e36d0b ;
-		font-weight: bold;
-	}
-</style>
-<title>Allali Impex</title>
+		@media (min-width: 576px) {
+			body {
+				font-size: 15px;
+			}
+		}
+
+		/* Tablets */
+		@media (min-width: 768px) {
+			body {
+				font-size: 16px;
+			}
+		}
+
+		/* Laptops */
+		@media (min-width: 992px) {
+			body {
+				font-size: 17px;
+			}
+		}
+
+		/* Desktops */
+		@media (min-width: 1200px) {
+
+			/*body {
+				font-size: 18px;
+			}*/
+			.f-size {
+				font-size: 39px !important;
+			}
+
+			.f-size-headings {
+				font-size: 39px !important;
+			}
+
+			.p-font-size{
+				font-size: 23px;
+			}
+		}
+	</style>
 </head>
-<body>
-	<div style="position:absolute;top:0px;height:93%;width:100%;overflow: auto;">
-<div id="container">
-<div style="width:100%;text-align:center;background-color: #d47a30;text-align: left;font-weight: bold;height:115px"><div id="logo"></div>
-<!--<h1 style="color: white;font-weight: bold;margin-left:10px">Allali Impex</h1>-->
-</div>
-<div id="title-img"><img src="allali_img1.jpg" style="width: 100%;height: 317px;object-fit: cover;"/></div>
-<div id="desc">
-	<h1>About Us</h1>
-	<div><p>At <span style="font-weight: bold;color:#e36d0b">Allali Impex</span>, we specialize in connecting global markets through seamless export and import solutions. With a strong network of international partners, we source and deliver quality products across industries — ensuring reliability, transparency, and timely execution in every shipment.
 
-Our team combines decades of experience in international trade, logistics, and compliance to make cross-border business effortless for our clients. Whether it’s exporting premium goods from India or importing world-class materials, we handle every step — from documentation and customs clearance to delivery — with utmost precision.</p>
-</div>
-</div>
-<div id="choose" style="display: flex;flex-direction: column;align-items: center;">
-	<h1>Why choose <span>Allali Impex</span></h1>
-	<div>
-		<ul style="list-style-type: none;text-align: left;padding: 0px;margin: 0px;">
-			<li><span class="tick-icon">&check;</span> Direct farm sourcing</li>
-			<li><span class="tick-icon">&check;</span> Hygienic cleaning & double polishing</li>
-			<li><span class="tick-icon">&check;</span> Custom packaging and private labeling</li>
-			<li><span class="tick-icon">&check;</span> On-time worldwide delivery</li>
-			<li><span class="tick-icon">&check;</span> Competitive export pricing</li>
-		</ul>
-		<a href="products.html">Go to products</a>
-		<a href="products.html">Go to About us</a>
-</div>
-</div>
-<div id="carouselExampleIndicators" class="carousel slide " data-bs-interval="10" data-ride="carousel" style="position:relative;top:10px">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-	<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="corousel-img-h-w d-block" src="peanuts.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="corousel-img-h-w d-block" src="chillie.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="corousel-img-h-w d-block" src="cotton-new.jpg" alt="Third slide">
-    </div>
-	<div class="carousel-item">
-      <img class="corousel-img-h-w d-block" src="turmeric.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<body class="resp-body pad">
+	<div class="resp-header flex-header">
+		<div>
+			<section class="p-menu1">
+				<nav id="navbar" class="navigation" role="navigation">
+					<input id="toggle1" type="checkbox" />
+					<label class="hamburger1" for="toggle1" onclick="openToggleMenu()">
+						<div class="top"></div>
+						<div class="meat"></div>
+						<div class="bottom"></div>
+					</label>
 
-
-<div style=""><h3 style="color:#0d6c0d;font-weight: bold;margin-top:10px">Our Products</h3></div>
-<div id="accordion">
-  <h3 style="" class="bg-gradient">Raw Cotton Bale</h3>
-  <div style="" class="auto-height" id="product1">
-  <div>
-  <image src="cotton-new.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
-  </div>
-  <div>
-  <h3>Short Description:</h3>
-    <p>Premium quality Raw Cotton Bales sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
+					<nav class="menu1" id="menu-id" style="display: none !important;">
+						<a class="link1" href="">Our Models</a>
+						<a class="link1" href="">Specialties</a>
+						<a class="link1" href="">About</a>
+						<a class="link1" href="">Blog</a>
+						<a class="link1 kbutton-nav" href="">Contact</a>
+					</nav>
+				</nav>
+			</section>
+		</div>
+		<div>
+			<img src="allali_logo_1.svg" class="img-header" />
+		</div>
 	</div>
-	<h3>Export & Usage Information:</h3>
-	<div>
-	<ul class="arrow-icon-ul">
-	<li class="arrow-icon"><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
-	<li class="arrow-icon"><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
-	<li class="arrow-icon"><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
-	</ul>
+	<div style="position: relative;">
+		<img src="background.jpg" class="bckimage">
+		<div style="position:absolute;top:8px;left:16px;font-size: 67px;color: white;" class="f-size">
+			<div>Discover the World's Best Spices:</div>
+			<button style="font-size: 45px;" class="know-more-btn f-size">Know more</button>
+		</div>
 	</div>
-	<h3>Packaging & Transportation:</h3>
-	<div>
-	<ul class="arrow-icon-ul">
-	<li class="arrow-icon">Bales are securely packed with iron or plastic straps.</li>
-	<li class="arrow-icon">Wrapped with HDPE or cotton cloth for safe handling during export.</li>
-	<li class="arrow-icon">Container loading: approx. 110–120 bales per 40ft container.</li>
-	</ul>
+	<div class="section-pad" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #f7db40;">
+		<div style="width:60%">
+		<div class="f-size-headings green-text-color" style="text-align: center;">About Us</div>
+		<p class="p-font-size">
+			At Allali Impex, we specialize in connecting global markets through seamless export and import solutions.
+			With a strong network of international partners, we source and deliver quality products across industries
+			â€” ensuring reliability, transparency, and timely execution in every shipment. Our team combines decades of
+			experience in international trade, logistics, and compliance to make cross-border business effortless for
+			our clients. Whether itâ€™s exporting premium goods from India or importing world-class materials, we handle
+			every step â€” from documentation and customs clearance to delivery â€” with utmost precision.
+		</p>
+		</div>
 	</div>
-  </div>
-  <h3 class="bg-gradient">Dry Red chilli</h3>
-  <div class="auto-height" id="product2">
-    <div>
-  <image src="chillie.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
-  </div>
-  <div>
-  <h3>Short Description:</h3>
-    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
-	
-	</div>
-	<h3>Export & Usage Information:</h3>
-	<div>
-	<ul>
-	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
-	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
-	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
-	</ul>
-	</div>
-	<h3>Packaging & Transportation:</h3>
-	<div>
-	<ul>
-	<li>Bales are securely packed with iron or plastic straps.</li>
-	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
-	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
-	</ul>
-	</div>
-  </div>
-  <h3 class="bg-gradient">Peanuts</h3>
-  <div class="auto-height" id="product3">
-    <div>
-  <image src="peanuts.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
-  </div>
-  <div>
-  <h3>Short Description:</h3>
-    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
-	
-	</div>
-	<h3>Export & Usage Information:</h3>
-	<div>
-	<ul>
-	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
-	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
-	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
-	</ul>
-	</div>
-	<h3>Packaging & Transportation:</h3>
-	<div>
-	<ul>
-	<li>Bales are securely packed with iron or plastic straps.</li>
-	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
-	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
-	</ul>
-	</div>
-  </div >
-  <h3 class="bg-gradient">Turmeric</h3>
-  <div class="auto-height" id="product4">
-    <div>
-  <image src="turmeric.jpg" style="height:250px;object-fit: cover;box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);width:100%"/>
-  </div>
-  <div>
-  <h3>Short Description:</h3>
-    <p>Premium quality dry red chilli sourced from trusted Indian farms. Ideal for textile mills and spinning industries. Our bales are carefully pressed, contamination-free, and meet international export standards — ensuring superior yarn quality and smooth processing.</p>
-	
-	</div>
-	<h3>Export & Usage Information:</h3>
-	<div>
-	<ul>
-	<li><span style="font-weight: bold;">Applications:</span> Textile mills, spinning industries, yarn manufacturers.</li>
-	<li><span style="font-weight: bold;">Export Destinations:</span> Bangladesh, Vietnam, China, Indonesia, Cambodia, and Turkey.</li>
-	<li><span style="font-weight: bold;">Quality Assurance:</span> 100% machine-cleaned, contamination-free, and tested as per international standards.</li>
-	</ul>
-	</div>
-	<h3>Packaging & Transportation:</h3>
-	<div>
-	<ul>
-	<li>Bales are securely packed with iron or plastic straps.</li>
-	<li>Wrapped with HDPE or cotton cloth for safe handling during export.</li>
-	<li>Container loading: approx. 110–120 bales per 40ft container.</li>
-	</ul>
-	</div>
-  </div>
-</div>
-</div>
-</div>
-<div id="footer" style="position:fixed; background-color: #d47a30;width: 100%;color:white;bottom:0px;padding-left:10px;height:37px;">
-	<strong>info@allaliimpex.com</strong> contact us: 123456;</div>
 </body>
+
 </html>

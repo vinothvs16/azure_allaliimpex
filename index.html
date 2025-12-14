@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
 	<script>
 		function openToggleMenu() {
 			var element = document.getElementById("menu-id");
@@ -230,16 +230,20 @@
 			flex-wrap: wrap;
 		}
 
-		.bottom-pad{
-         padding-bottom: 5px;
+		.bottom-pad {
+			padding-bottom: 5px;
 		}
 
-		.rounded-corner{
-          border-radius: 5px;
-		  background-color: #166f59;
-		  color: white;
-		  border:1px solid #166f59;
-		  padding:5px;
+		.rounded-corner {
+			border-radius: 5px;
+			background-color: #166f59;
+			color: white;
+			border: 1px solid #166f59;
+			padding: 5px;
+		}
+
+		#top-header {
+			display: none;
 		}
 
 		@media (min-width: 576px) {
@@ -292,11 +296,27 @@
 				width: auto;
 				height: 226px;
 			}
+
+			#top-header {
+				display: flex;
+				text-align: center;
+				align-items: center;
+				background-color: #d0d958;
+				padding: 8px 35px;
+				justify-content: space-between;
+			}
 		}
 	</style>
 </head>
 
 <body class="resp-body pad">
+	<!-- top header -->
+	<div id="top-header">
+		<div><a href="#" style="color: #166f59; font-weight: bold;">allaliimpex.com</a></div>
+		<div><span style="color: #166f59; font-weight: bold;">Contact:+91 9952302042</span></div>
+		<!--<div></div> -->
+	</div>
+	<!-- top header ends -->
 	<div class="resp-header flex-header">
 		<div>
 			<section class="p-menu1">
@@ -338,13 +358,13 @@
 				solutions.
 				With a strong network of international partners, we source and deliver quality products across
 				industries
-				â€” ensuring reliability, transparency, and timely execution in every shipment. Our team combines
+				- ensuring reliability, transparency, and timely execution in every shipment. Our team combines
 				decades of
 				experience in international trade, logistics, and compliance to make cross-border business effortless
 				for
-				our clients. Whether itâ€™s exporting premium goods from India or importing world-class materials, we
+				our clients. Whether it's exporting premium goods from India or importing world-class materials, we
 				handle
-				every step â€” from documentation and customs clearance to delivery â€” with utmost precision.
+				every step - from documentation and customs clearance to delivery - with utmost precision.
 			</p>
 		</div>
 	</div>
@@ -364,16 +384,18 @@
 		</div>
 	</div>
 	<!-- Check out our products section-->
-	 <div style="text-align: center;" class="f-size-headings green-text-color"><span>Check out our Products</span></div>
+	<div style="text-align: center;" class="f-size-headings green-text-color"><span>Check out our Products</span></div>
 	<div class="section-pad flex-row-wrap">
-		<div style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column;" class="bottom-pad">
-			<img src="chillie.jpg"  style="height: auto; max-width: 100%; padding-bottom:10px"/>
+		<div style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column;"
+			class="bottom-pad">
+			<img src="chillie.jpg" style="height: auto; max-width: 100%; padding-bottom:10px" />
 			<span class="p-font-size bottom-pad green-text-color">Chilly</span>
 			<button class="rounded-corner">View More</button>
 		</div>
 
-		<div style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 10px;">
-			<img src="turmeric-finger.jpg"  style="height: auto; max-width: 100%; padding-bottom:10px"/>
+		<div
+			style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 10px;">
+			<img src="turmeric-finger.jpg" style="height: auto; max-width: 100%; padding-bottom:10px" />
 			<span class="p-font-size bottom-pad green-text-color">Turmeric Fingers</span>
 			<button class="rounded-corner">View More</button>
 		</div>

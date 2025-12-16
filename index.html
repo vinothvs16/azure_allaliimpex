@@ -3,7 +3,8 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="kit.fontawesome.com" crossorigin="anonymous"></script>
 	<script>
 		function openToggleMenu() {
 			var element = document.getElementById("menu-id");
@@ -246,6 +247,23 @@
 			display: none;
 		}
 
+		.footer-flex-column {
+			display: flex;
+			flex-direction: column;
+			justify-content: left;
+			align-items: flex-start;
+			padding: 5px;
+		}
+
+		.gold-green {
+			color: #57d131;
+		}
+
+		.gold-logo-resp {
+			width: 240px;
+			height: auto;
+		}
+
 		@media (min-width: 576px) {
 			body {
 				font-size: 15px;
@@ -304,6 +322,11 @@
 				background-color: #d0d958;
 				padding: 8px 35px;
 				justify-content: space-between;
+			}
+
+			.gold-logo-resp {
+				width: 388px;
+				height: auto;
 			}
 		}
 	</style>
@@ -400,6 +423,27 @@
 			<button class="rounded-corner">View More</button>
 		</div>
 
+	</div>
+	<!-- Footer section starts -->
+	<div class="footer-flex-column" style="background-color: #166f59;">
+		<div style="border-bottom:1px solid goldenrod;width: 100%;">
+			<img src="new_logo.svg" class="gold-logo-resp" style="width: 388x; height: auto; " />
+		</div>
+		<div style="padding:2px">
+			<p class="gold-green">We believe in our strength and our strength is quality</p>
+		</div>
+		<div style="display: flex; flex-direction: row; width:100%">
+			<img src="globe.svg" style="width: 30px; margin-right: 13px;" />
+			<div>
+				<p style="color:#f7fe9f">www.Allaliimpex.com</p>
+			</div>
+		</div>
+		<div style="display: flex; flex-direction: row; width:100%">
+			<img src="map.svg" style="width: 30px; margin-right: 13px;"/>
+			<div>
+				<p style="color:#f7fe9f">#14SP, 2nd floor, SKCL Tech Square, SIDCO TVK Industrial, Guindy Industrial Estate, Chennai - 600 032, Tamil Nadu, India.</p>
+			</div>
+		</div>
 	</div>
 </body>
 

@@ -36,7 +36,7 @@
 			flex-direction: column;
 			position: absolute;
 			top: 0px;
-			bottom: 0px;
+			/**bottom: 0px;**/
 			width: 100%;
 			background-color: #f7fe9f;
 		}
@@ -48,7 +48,7 @@
 
 		.resp-header {
 			width: 100%;
-			height: 97px;
+			height: 115px;
 			background-color: #166f59;
 		}
 
@@ -86,8 +86,8 @@
 		.hamburger1 div {
 			background-color: white;
 			position: relative;
-			width: 40px;
-			height: 5px;
+			width: 20px;
+			height: 3px;
 			margin-top: 0px;
 			-webkit-transition: all 0.2s ease-in-out;
 			transition: all 0.2s ease-in-out;
@@ -171,7 +171,7 @@
 
 		.img-header {
 			width: auto;
-			height: 163px;
+			height: 62px;
 		}
 
 		.bckimage {
@@ -307,12 +307,12 @@
 			}
 
 			.hamburger1 {
-				height: 45px;
+				height: 25px;
 			}
 
 			.img-header {
 				width: auto;
-				height: 226px;
+				height: 105px;
 			}
 
 			#top-header {
@@ -341,7 +341,7 @@
 	</div>
 	<!-- top header ends -->
 	<div class="resp-header flex-header">
-		<div>
+		<div style="position: absolute; left:0px">
 			<section class="p-menu1">
 				<nav id="navbar" class="navigation" role="navigation">
 					<input id="toggle1" type="checkbox" />
@@ -361,7 +361,7 @@
 				</nav>
 			</section>
 		</div>
-		<div>
+		<div style="margin-left: 15px;">
 			<img src="allali_logo_1.svg" class="img-header" />
 		</div>
 	</div>
@@ -411,6 +411,20 @@
 	<div class="section-pad flex-row-wrap">
 		<div style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column;"
 			class="bottom-pad">
+			<img src="cotton.jpg" style="height: auto; max-width: 100%; padding-bottom:10px" />
+			<span class="p-font-size bottom-pad green-text-color">Cotton</span>
+			<button class="rounded-corner">View More</button>
+		</div>
+
+		<div
+			style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 10px;">
+			<img src="peanuts.jpg" style="height: auto; max-width: 100%; padding-bottom:10px" />
+			<span class="p-font-size bottom-pad green-text-color">Peanuts</span>
+			<button class="rounded-corner">View More</button>
+		</div>
+
+		<div
+			style="width:320px; display: flex; justify-content: center; align-items: center; flex-direction: column; margin-left: 10px;">
 			<img src="chillie.jpg" style="height: auto; max-width: 100%; padding-bottom:10px" />
 			<span class="p-font-size bottom-pad green-text-color">Chilly</span>
 			<button class="rounded-corner">View More</button>
